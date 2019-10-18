@@ -1,0 +1,63 @@
+/* Set the background color of body to white */
+
+body {
+    background: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+#small {
+    background: pink;
+    flex-basis: 33%;
+}
+
+#medium {
+    background: yellow;
+    flex-basis: 33%;
+}
+
+#large {
+    background: brown;
+    flex-basis: 33%;
+}
+
+
+/* On screens that are 300px or less, set the background color to red 
+   If the screen size is 300px wide or less, hide the element */
+
+@media screen and (max-width: 300px) {
+    body {
+        background-color: red;
+        flex-direction: column;
+    }
+}
+
+
+/* On screens > than 300 px and less than 768px set the background color to green */
+
+@media screen and (min-width: 301px) and (max-width: 768px) {
+    body {
+        background-color: green;
+        flex-wrap: wrap;
+    }
+    #small {
+        flex-basis: 66%;
+    }
+    #medium {
+        flex-basis: 33%;
+    }
+    #large {
+        flex-basis: 100%;
+    }
+}
+
+
+/* On screens > than 768px set the background color to blue */
+
+@media screen and (min-width: 768px) {
+    body {
+        background-color: blue;
+    }
+}
